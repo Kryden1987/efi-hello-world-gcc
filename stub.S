@@ -1,3 +1,12 @@
+/* SPDX-License-Identifier: GPL-2.0 */
+/*
+ * Function calling ABI conversion from Linux to EFI for x86_64
+ *
+ * Copyright (C) 2007 Intel Corp
+ *	Bibo Mao <bibo.mao@intel.com>
+ *	Huang Ying <ying.huang@intel.com>
+*/
+
 #define SAVE_XMM                \
     mov %rsp, %rax;             \
     subq $0x70, %rsp;           \

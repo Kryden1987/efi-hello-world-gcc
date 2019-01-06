@@ -10,13 +10,13 @@ hello:  boot.o main.o stub.o
 	$(OBJCOPY) -j .header -j .text -j .init -j .data -j .rodata -j .reloc -O binary hello.so hello.efi
 
 boot.o:
-	$(CC) -std=c99 -c boot.S -o boot.o -fpic
+	$(CC) -std=c99 -c source/boot.S -o boot.o -fpic
 
 main.o:
-	$(CC) -std=c99 -c main.c -o main.o -fpic
+	$(CC) -std=c99 -c source/main.c -o main.o -fpic
 
 stub.o:
-	$(CC) -c stub.S -o stub.o
+	$(CC) -c source/stub.S -o stub.o
 
 
 clean:

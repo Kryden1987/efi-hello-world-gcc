@@ -6,6 +6,8 @@ set(CMAKE_VERBOSE_MAKEFILE ON)
 
 set(OBJS ${CMAKE_CURRENT_SOURCE_DIR}/objects)
 
+set (CMAKE_C_FLAGS "-fno-stack-protector")
+
 set_source_files_properties(boot.S PROPERTIES COMPILE_FLAGS "-fpic")
 set_source_files_properties(stub.S PROPERTIES COMPILE_FLAGS "-fpic")
 
